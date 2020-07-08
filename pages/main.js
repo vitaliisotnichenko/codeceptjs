@@ -4,11 +4,12 @@ module.exports = {
 
     // setting locators
     fields: {
-        username: '#login-form-username',
-        password: '#login-form-password',
+        username: 'Username',
+        password: 'Password',
 
     },
     loginButton: '#login',
+    createIssue: '#create_link',
 
     // methods
     loginWith(username, password) {

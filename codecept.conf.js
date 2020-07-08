@@ -9,11 +9,17 @@ exports.config = {
       windowSize: '1200x900',
       waitForNavigation: 'networkidle0',
       waitForAction: 500
-    }
+    },
+    
+    
+    
+    
+    MockRequest: {}
   },
   include: {
     I: './steps/steps_file.js',
     mainPage: './pages/main.js',
+    createIssuePage: './pages/createIssue.js'
   },
   bootstrap: null,
   mocha: {},
@@ -24,6 +30,9 @@ exports.config = {
     },
     screenshotOnFail: {
       enabled: true
+    },
+    allure: {
+      "enabled": true
     }
   }
 };
