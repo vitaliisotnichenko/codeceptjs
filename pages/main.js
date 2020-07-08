@@ -11,7 +11,7 @@ module.exports = {
     loginButton: '#login',
 
     // methods
-    login(username, password) {
+    loginWith(username, password) {
         I.fillField(this.fields.username, username);
         I.fillField(this.fields.password, password);
         I.checkOption('Remember my login on this computer');

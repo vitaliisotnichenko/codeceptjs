@@ -1,6 +1,7 @@
 exports.config = {
   tests: './tests/*_test.js',
   output: './output',
+  timeout: 10000,
   helpers: {
     Puppeteer: {
       url: 'https://jira.hillel.it',
@@ -11,7 +12,8 @@ exports.config = {
     }
   },
   include: {
-    I: './steps/steps_file.js'
+    I: './steps/steps_file.js',
+    mainPage: './pages/main.js',
   },
   bootstrap: null,
   mocha: {},
