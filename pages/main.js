@@ -4,8 +4,10 @@ module.exports = {
 
     // setting locators
     fields: {
-        username: 'Username',
-        password: 'Password',
+        username: '#login-form-username',
+        password: '#login-form-password',
+        //username: 'Username',
+        //password: 'Password',
 
     },
     loginButton: '#login',
@@ -13,8 +15,10 @@ module.exports = {
 
     // methods
     loginWith(username, password) {
-        I.fillField(this.fields.username, username);
-        I.fillField(this.fields.password, password);
+        I.fillFieldWithTimeout(this.fields.username, username);
+        I.fillFieldWithTimeout(this.fields.password, password);
+       // I.fillField(this.fields.username, username);
+       // I.fillField(this.fields.password, password);
         I.checkOption('Remember my login on this computer');
         I.click(this.loginButton);
     }

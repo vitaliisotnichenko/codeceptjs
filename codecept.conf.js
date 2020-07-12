@@ -10,11 +10,10 @@ exports.config = {
       waitForNavigation: 'networkidle0',
       waitForAction: 500
     },
-    
-    
-    
-    
-    MockRequest: {}
+
+    FillFieldWithTimeout: {
+      require: "./helpers/fillFieldWithDelay.js"
+    },
   },
   include: {
     I: './steps/steps_file.js',

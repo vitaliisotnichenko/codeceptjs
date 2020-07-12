@@ -5,8 +5,8 @@ module.exports = {
     fields: {
         project: '#project',
         issueType: 'Issue Type',
-        summary: 'Summary',
-        reporter: 'Reporter',
+        summary: '#summary',
+        reporter: '#reporter-field',
         description: 'Description'
     },
 
@@ -16,10 +16,10 @@ module.exports = {
     sendForm(project, issueType, summary, reporter, description) {
        // I.selectOption(this.project, project);
         //I.selectOption(this.issueType, issueType);
-        I.clearField(this.fields.summary);
-        I.fillField(this.fields.summary, summary);
-        I.clearField(this.fields.reporter);
-        I.fillField(this.fields.reporter, reporter);
+        I.fillFieldWithTimeout(this.fields.summary, summary);
+        I.clearField(this.fields.reporter, reporter);
+        I.fillFieldWithTimeout(this.fields.reporter, reporter);
+     //   I.waitForElement('#create_link');
         I.fillField(this.fields.description, description);
         I.click(this.createIssueButton);
     },
